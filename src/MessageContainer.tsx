@@ -130,19 +130,7 @@ export default class MessageContainer extends React.PureComponent<
   }
 
   componentWillReceiveProps(nextProps: MessageContainerProps) {
-    if (
-      this.props.messages &&
-      this.props.messages.length === 0 &&
-      nextProps.messages &&
-      nextProps.messages.length > 0
-    ) {
-      this.detachKeyboardListeners()
-    } else if (
-      this.props.messages &&
-      nextProps.messages &&
-      this.props.messages.length > 0 &&
-      nextProps.messages.length === 0
-    ) {
+   if (this.props.messages && nextProps.messages && this.props.messages.length > 0 && nextProps.messages.length === 0) {
       this.attachKeyboardListeners()
     }
   }
