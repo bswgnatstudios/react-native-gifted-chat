@@ -126,7 +126,7 @@ export default class MessageContainer extends React.PureComponent<
   }
 
   componentWillUnmount() {
-    this.detachKeyboardListeners()
+    //this.detachKeyboardListeners()
   }
 
   componentWillReceiveProps(nextProps: MessageContainerProps) {
